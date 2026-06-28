@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender {
+            width: auto;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Movie Ticket Booking Form</h2>
+
+    <form action="submit.php" method="post">
+
+        <label>Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" required>
+
+        <label>Age</label>
+        <input type="number" name="age" min="1">
+
+        <label>Gender</label>
+        <input type="radio" class="gender" name="gender" value="Male"> Male
+        <input type="radio" class="gender" name="gender" value="Female"> Female
+        <input type="radio" class="gender" name="gender" value="Others"> Others
+
+        <label>Select Movie</label>
+        <select name="movie" required>
+            <option value="">Choose Movie</option>
+            <option>Karuppu</option>
+            <option>Gilli</option>
+            <option>Kanchana</option>
+            <option>Pushpa 2</option>
+        </select>
+
+        <label>Theater Name</label>
+        <select name="theater" required>
+            <option value="">Choose Theater</option>
+            <option>Sri Balaji Cinemas</option>
+            <option>TPV Multiflex</option>
+            <option>Kalyani Theatre</option>
+            <option>Alangar Cinemas</option>
+        </select>
+
+        <label>Show Date</label>
+        <input type="date" name="showdate" required>
+
+        <label>Show Time</label>
+        <input type="time" name="showtime" required>
+
+        <label>Number of Tickets</label>
+        <input type="number" name="tickets" min="1" max="10" required>
+
+        <label>Seat Type</label>
+        <select name="seattype">
+            <option>Regular</option>
+            <option>Premium</option>
+            <option>VIP</option>
+        </select>
+
+        <label>Food Combo</label>
+        <select name="foodcombo">
+            <option>None</option>
+            <option>Popcorn + Coke</option>
+            <option>Burger + Coke</option>
+            <option>Family Combo</option>
+        </select>
+
+        <label>Payment Method</label>
+        <select name="payment">
+            <option>UPI</option>
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+            <option>Net Banking</option>
+            <option>Cash</option>
+        </select>
+
+        <label>Special Requests</label>
+        <textarea name="request" rows="4"></textarea>
+
+        <button type="submit">Book Ticket</button>
+
+    </form>
+</div>
+
+</body>
+</html>

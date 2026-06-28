@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Ticket Booking</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#111;
+        color:white;
+    }
+
+    /* Navbar */
+    nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 8%;
+        background:#000;
+    }
+
+    .logo{
+        font-size:28px;
+        font-weight:bold;
+        color:#ff4d4d;
+    }
+
+    nav ul{
+        display:flex;
+        list-style:none;
+        gap:25px;
+    }
+
+    nav ul li a{
+        color:white;
+        text-decoration:none;
+        transition:0.3s;
+    }
+
+    nav ul li a:hover{
+        color:#ff4d4d;
+    }
+
+    .btn{
+        background:#ff4d4d;
+        color:white;
+        padding:10px 20px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    /* Hero Section */
+    .hero{
+        height:85vh;
+        background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80') center/cover;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        position:relative;
+    }
+
+    .hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+        position:relative;
+        z-index:1;
+    }
+
+    .hero h1{
+        font-size:60px;
+        margin-bottom:20px;
+    }
+
+    .hero p{
+        font-size:20px;
+        margin-bottom:30px;
+    }
+
+    .hero button{
+        padding:15px 30px;
+        background:#ff4d4d;
+        border:none;
+        color:white;
+        font-size:18px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    /* Movies Section */
+    .movies{
+        padding:60px 8%;
+    }
+
+    .movies h2{
+        text-align:center;
+        margin-bottom:40px;
+        font-size:36px;
+    }
+
+    .movie-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:25px;
+    }
+
+    .movie-card{
+        background:#1e1e1e;
+        border-radius:10px;
+        overflow:hidden;
+        transition:0.3s;
+    }
+
+    .movie-card:hover{
+        transform:translateY(-8px);
+    }
+
+    .movie-card img{
+        width:100%;
+        height:350px;
+        object-fit:cover;
+    }
+
+    .movie-info{
+        padding:15px;
+    }
+
+    .movie-info h3{
+        margin-bottom:10px;
+    }
+
+    .movie-info button{
+        width:100%;
+        margin-top:10px;
+        padding:10px;
+        background:#ff4d4d;
+        color:white;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    footer{
+        text-align:center;
+        padding:20px;
+        background:#000;
+        margin-top:40px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">MovieBook</div>
+
+    <ul>
+        <li><a href="Booking.html">Home</a></li>
+        <li><a href="Movies.html">Movies</a></li>
+        <li><a href="Theaters.html">Theaters</a></li>
+        <li><a href="Offers.html">Offers</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="btn">Login</button>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Book Your Movie Tickets</h1>
+        <p>Enjoy the latest blockbusters at your favorite theaters.</p>
+<button onclick="window.location.href='Booking.html'">
+    Book Now
+</button>
+    </div>
+</section>
+
+<!-- Movies Section -->
+<section class="movies">
+    <h2>Now Showing</h2>
+
+    <div class="movie-grid">
+
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b76Y51YxTepa8xVOP9fA9f3eGpDdAwUC3phOOUQZ2A&s=10" alt="Gilli">
+            <div class="movie-info">
+                <h3>Gilli</h3>
+                <p>Action | Adventure</p>
+                <button>Book Ticket</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsspfNpRaxtcGL9Ns6nXB_pQgaU1F2EUtL3-ILMkPiqA&s=10" alt="Kanchana">
+            <div class="movie-info">
+                <h3>Kanchana</h3>
+                <p>Comedy | Horror</p>
+                <button>Book Ticket</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXKDw2QgZWQmKqcHavCEjNCJsylmKeO9aCk5uNjE60yQ&s=10" alt="Karuppu">
+            <div class="movie-info">
+                <h3>Karuppu</h3>
+                <p>Action| Adventure</p>
+                <button>Book Ticket</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEYy8-0UsZcLBs9ylM-4DsMdtpYoX_38xRuYll5qQhsQ&s=10" alt="Pushpa 2">
+            <div class="movie-info">
+                <h3>Pushpa 2</h3>
+                <p>Adventure | Thriller</p>
+                <button>Book Ticket</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Raj Movie Booking</p>
+</footer>
+
+</body>
+</html>
